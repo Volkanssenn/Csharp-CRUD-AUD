@@ -1,0 +1,40 @@
+﻿@page
+@model testApp.Pages.Index1Model
+@{
+}
+<br>
+<h3 style="color:red;">DB Test Data's</h3>
+<h5 style="color:green;">Siparişler</h5>
+<a class="btn btn-primary btn-sm" href="/Clients/create">Create</a>
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>İsim</td>
+            <td>Email</td>
+            <td>Telefon</td>
+            <td>Adres</td>
+            <td>Oluşturulma Zamanı</td>
+            <td>Eylemler</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.ListClients)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.email</td>
+                <td>@item.phone</td>
+                <td>@item.address</td>
+                <td>@item.created_at</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Clients/Edit?id=@item.id">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Clients/Delete?id=@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <div class="row d-flex align-items-center" style="height: 100vh;">
+        <div class="col align-items-center">
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" placeholder="Image Url" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Title" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+                <textarea name="Description" placeholder="Description" id="" cols="150" rows="5"></textarea>
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+                <button type="button" class="btn btn-primary">Gönder</button>
+            </div>
+            <div class="input-group input-group-lg">
+                <button type="button" class="btn btn-primary"></button>
+            </div>
+        </div>
+    </div>
+</div>
