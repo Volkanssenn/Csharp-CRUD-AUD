@@ -61,6 +61,7 @@ namespace testApp.Pages
             public string title;
             public string description;
             public string ImageUrl;
+            public int price;
         }
 
 

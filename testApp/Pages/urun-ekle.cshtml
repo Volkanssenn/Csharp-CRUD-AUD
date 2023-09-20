@@ -1,0 +1,42 @@
+﻿@page
+@model testApp.Pages.urun_ekleModel
+@{
+}
+<class ="container">
+    <div class="row d-flex align-items-center" style="height: 100vh;">
+        <div class="col align-items-center">
+            @if (Model.errorMessage.Length > 0)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @Model.errorMessage
+                </div>
+            }
+            <form method="POST">
+                <input type="hidden" name="id" value="@Model.">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="Title" value="" placeholder="Ürün Başlığı" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="description" value="" placeholder="Ürünün açıklaması" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <div class="input-group  mb-3">
+                    <input type="text" class="form-control" name="URL" value="" placeholder="Resmin dosya adı" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <div class="input-group  mb-3">
+                    <input type="text" class="form-control" name="price" value="" placeholder="Ürünün fiyatı" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <div class="input-group input-group-lg">
+                    <button type="submit" class="btn btn-primary">Oluştur</button>
+                </div>
+            </form> 
+            <p>@Model.ListProduct1.title , @Model.ListProduct1.description , @Model.ListProduct1.ImageUrl , @Model.ListProduct1.price</p>
+           
+            
+
+
+        </div>
+    </div>

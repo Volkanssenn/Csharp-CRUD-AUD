@@ -53,8 +53,6 @@ namespace testApp.Pages.Clients
                         }
                         else
                         {
-                            // Belirtilen ID ile eþleþen satýr bulunamadý
-                            // Uygun bir hata mesajý gösterebilirsiniz
                             Response.Redirect("../clients/create");
                         }
                     }

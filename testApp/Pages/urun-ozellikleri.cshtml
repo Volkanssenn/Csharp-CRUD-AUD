@@ -6,37 +6,50 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <img src="/images/pngwing.com (1).png" width="500" style="box-shadow:3px 3px 10px black;" />
+            <img src="@Model.ListProduct2.ImageUrl" alt="değer boş" width="500" style="box-shadow:3px 3px 10px black;">
         </div>
         <div class="col">
             <div class="row">
                 <div class="col">
-                    <h3>Iphone 14</h3>
+                    <h3>@Model.ListProduct2.title</h3>
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <p class="btn btn-warning">Beleş Kargo krg</p>
+                        <p class="btn btn-warning">Ücretsiz Kargo <ion-icon name="car-outline"></ion-icon></p>
                     </div>
                     <div class="col-4">
                         <p class="btn btn-warning">%10 İndirim ind</p>
                     </div>
                 </div>
+                <row>
+                    <col>
+                    <p>@Model.ListProduct2.description</p>
+                </col>
+                </row>
                 <div class="row">
                     <div class="col">
-                        <input type="number" name="adet"></input>
+                        <input type="number" name="adet">
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col">
-                        <h2>58.999 TL</h2>
+                        <h2>@Model.ListProduct2.price ₺</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p class="btn btn-success">Satın Al</p>
+                        <p class="btn btn-success" type="Submit">Satın Al</p>
                     </div>
+                    @if (Model.successMessage.Length > 0)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @Model.successMessage
+                        </div>
+                    }
                 </div>
+
             </div>
         </div>
     </div>
 </div>
+
