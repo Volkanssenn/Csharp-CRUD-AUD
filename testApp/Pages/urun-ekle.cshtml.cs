@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Data.SqlClient;
 using System.Reflection.PortableExecutable;
 using testApp.Pages.Clients;
 using static testApp.Pages.IndexModel;
@@ -25,6 +26,47 @@ namespace testApp.Pages
                 return;
             }
             ListProduct1.price = priceValue;
+
+            if (ListProduct1.title.Length == 0 || ListProduct1.description.Length == 0 ||
+                ListProduct1.ImageUrl.Length == 0 || ListProduct1.price == 0)
+            {
+                errorMessage = "Bütün alanlarýn doldurulmasý gerekiyor.";
+                return;
+            }
+            succesMessage = "baðlantý açýk";
+
+            try
+            {
+                string connectionString = "Data Source=KAIS;Initial Catalog=testArea;Integrated Security=True";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    succesMessage = "baðlantý açýk";
+                    String sql = "INSERT INTO [dbo].[products] " +
+                        "([title], [description], [ImageUrl], [price]) VALUES " +
+                        "(@title, @description, @ImageUrl, @price)";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        succesMessage = "parametre açýk";
+                        command.Parameters.AddWithValue("@title", ListProduct1.title);
+                        command.Parameters.AddWithValue("@description", ListProduct1.description);
+                        command.Parameters.AddWithValue("@ImageUrl", ListProduct1.ImageUrl);
+                        command.Parameters.AddWithValue("@price", ListProduct1.price);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                return;
+            }
+            succesMessage = "Yeni Sipariþ Eklendi";
+
+            
         }
     }
 }

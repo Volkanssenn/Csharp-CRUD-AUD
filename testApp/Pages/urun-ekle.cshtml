@@ -11,6 +11,13 @@
                     @Model.errorMessage
                 </div>
             }
+            @if (Model.succesMessage.Length > 0)
+            {
+                <div class="alert alert-success" role="alert">
+                    @Model.succesMessage
+                </div>
+                
+            }
             <form method="POST">
                 <input type="hidden" name="id" value="@Model.">
                 <div class="input-group mb-3">
