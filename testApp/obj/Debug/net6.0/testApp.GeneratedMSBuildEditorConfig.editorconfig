@@ -60,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXJ1bi1vemVsbGlrbGVyaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/volka/source/repos/testApp/testApp/Pages/urun-sil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXJ1bi1zaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/volka/source/repos/testApp/testApp/Pages/urunler.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXJ1bmxlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
