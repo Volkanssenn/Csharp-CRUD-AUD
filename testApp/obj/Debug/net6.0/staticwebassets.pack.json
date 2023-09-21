@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\volka\\source\\repos\\testApp\\testApp\\wwwroot\\images\\coffeeTime.png",
+      "PackagePath": "staticwebassets\\images\\coffeeTime.png"
+    },
+    {
       "Id": "C:\\Users\\volka\\source\\repos\\testApp\\testApp\\wwwroot\\images\\pngwing.com (1).png",
       "PackagePath": "staticwebassets\\images\\pngwing.com (1).png"
     },

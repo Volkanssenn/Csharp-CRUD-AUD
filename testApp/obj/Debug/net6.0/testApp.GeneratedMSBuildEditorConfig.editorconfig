@@ -48,12 +48,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcc2hvd0RiLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/volka/source/repos/testApp/testApp/Pages/urun-duzenle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXJ1bi1kdXplbmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/volka/source/repos/testApp/testApp/Pages/urun-ekle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXJ1bi1la2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/volka/source/repos/testApp/testApp/Pages/urun-ozellikleri.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXJ1bi1vemVsbGlrbGVyaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/volka/source/repos/testApp/testApp/Pages/urunler.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXJ1bmxlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/volka/source/repos/testApp/testApp/Pages/_ViewImports.cshtml]

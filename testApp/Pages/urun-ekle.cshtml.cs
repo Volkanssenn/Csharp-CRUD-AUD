@@ -23,7 +23,6 @@ namespace testApp.Pages
             if (int.TryParse(Request.Form["price"], out int priceValue))
             {
                 ListProduct1.price = priceValue;
-                return;
             }
             ListProduct1.price = priceValue;
 
@@ -33,7 +32,6 @@ namespace testApp.Pages
                 errorMessage = "Bütün alanlarýn doldurulmasý gerekiyor.";
                 return;
             }
-            succesMessage = "baðlantý açýk";
 
             try
             {
@@ -42,13 +40,11 @@ namespace testApp.Pages
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    succesMessage = "baðlantý açýk";
                     String sql = "INSERT INTO [dbo].[products] " +
                         "([title], [description], [ImageUrl], [price]) VALUES " +
                         "(@title, @description, @ImageUrl, @price)";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        succesMessage = "parametre açýk";
                         command.Parameters.AddWithValue("@title", ListProduct1.title);
                         command.Parameters.AddWithValue("@description", ListProduct1.description);
                         command.Parameters.AddWithValue("@ImageUrl", ListProduct1.ImageUrl);

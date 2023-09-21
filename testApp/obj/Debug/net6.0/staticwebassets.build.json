@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "O6mXyfS2hWlORO4rxTBf60xpSdiJwdthUH7VRyRyI44=",
+  "Hash": "484BFeH2ld4bedVH+1z3S6z7t+NqCIyxmRgPBwMCSJw=",
   "Source": "testApp",
   "BasePath": "_content/testApp",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\volka\\source\\repos\\testApp\\testApp\\wwwroot\\images\\coffeeTime.png",
+      "SourceId": "testApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\volka\\source\\repos\\testApp\\testApp\\wwwroot\\",
+      "BasePath": "_content/testApp",
+      "RelativePath": "images/coffeeTime.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\coffeeTime.png"
     },
     {
       "Identity": "C:\\Users\\volka\\source\\repos\\testApp\\testApp\\wwwroot\\images\\pngwing.com (1).png",

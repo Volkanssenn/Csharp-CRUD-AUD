@@ -1,0 +1,40 @@
+﻿@page
+@model testApp.Pages.urunlerModel
+@{
+}
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.errorMessage
+    </div>
+}
+<table>
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>title</td>
+            <td>description</td>
+            <td>ImageUrl</td>
+            <td>price</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+            @foreach (var item in Model.ListProduct)
+        {
+            <tr style="height:100px">
+                <td style="width:30px;">@item.id</td>
+                <td style="width:150px;">@item.title</td>
+                <td style="width:370px;">@item.description</td>
+                <td style="width:220px;">@item.ImageUrl</td>
+                <td style ="width:70px;">@item.price</td>
+                <td style="width:30px;">
+                    <a class="btn btn-sm btn-danger mb-2" href="urun-sil?urun_id=@item.id">Sil</a>
+                    <a class="btn btn-sm btn-warning" href="urun-duzenle?urun_id=@item.id">Düzenle</a>
+                </td>
+            </tr>
+            }
+        
+    </tbody>
+</table>
+

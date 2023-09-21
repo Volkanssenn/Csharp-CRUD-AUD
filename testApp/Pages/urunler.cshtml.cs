@@ -1,20 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SqlClient;
+using static testApp.Pages.IndexModel;
 
 namespace testApp.Pages
 {
-    public class IndexModel : PageModel
+    public class urunlerModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
         public List<ProductsInfo> ListProduct = new List<ProductsInfo>();
-
-
+        public string errorMessage = "";
         public void OnGet()
         {
             try
@@ -31,13 +25,14 @@ namespace testApp.Pages
                         {
                             while (reader.Read())
                             {
-                                ProductsInfo productInfo = new ProductsInfo();
-                                productInfo.id = "" + reader.GetInt32(0);
-                                productInfo.title = reader.GetString(1);
-                                productInfo.description = reader.GetString(2);
-                                productInfo.ImageUrl = reader.GetString(3);
+                                ProductsInfo productsInfo = new ProductsInfo();
+                                productsInfo.id = "" + reader.GetInt32(0);
+                                productsInfo.title = reader.GetString(1);
+                                productsInfo.description = reader.GetString(2);
+                                productsInfo.ImageUrl = reader.GetString(3);
+                                productsInfo.price = reader.GetInt32(4);
 
-                                ListProduct.Add(productInfo);
+                                ListProduct.Add(productsInfo);
                             }
                         }
                     }
@@ -49,23 +44,5 @@ namespace testApp.Pages
                 Console.WriteLine("Exception: " + ex.ToString);
             }
         }
-        public void OnPost() 
-        {
-
-            
-        }
-
-        public class ProductsInfo
-        {
-            public string id;
-            public string title;
-            public string description;
-            public string ImageUrl;
-            public int price;
-
- 
-        }
-
-
     }
 }
